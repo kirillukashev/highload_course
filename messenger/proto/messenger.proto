@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package messenger;
+
+import "google/api/annotations.proto";
+
+service Messenger {
+  rpc SendMessage (Message) returns (Empty) {
+    option (google.api.http) = {
+      post: "/v1/messages"
+      body: "*"
+    };
+  }
+  
+  rpc ReceiveMessages (User) returns (stream Message) {
+    option (google.api.http) = {
+      get: "/v1/messages/{username}"
+    };
+  }
+}
+
+message Message {
+  string sender = 1;
+  string to = 2;
+  string content = 3;
+  int64 timestamp = 4;
+}
+
+message User {
+  string username = 1;
+}
+
+message Empty {} 
