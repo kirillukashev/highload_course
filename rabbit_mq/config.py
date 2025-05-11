@@ -14,5 +14,5 @@ RABBITMQ_URL = os.getenv("RABBITMQ_URL", "amqp://guest:guest@localhost/")
 # SMTP settings for Gmail
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 587
-SMTP_USER = "kolyvanov1455@gmail.com"  # Ваш Gmail адрес
-SMTP_PASSWORD = "ifbu bejh ztlp iqrt"  # Пароль приложения для RabbitMQ Auth 
+SMTP_USER = "<gmail>"  # Ваш Gmail адрес
+SMTP_PASSWORD = "<password>"  # Пароль приложения для RabbitMQ Auth 
